@@ -1,0 +1,134 @@
+# If you need more than just the "main" content area you can uncomment the snippet below. It will add a "sidebar" area
+# to your pages. You can add as many areas as you like, still only those that are rendered in your TypoScript and
+# Template are visible on your page.
+---
+#'TYPO3.Neos.NodeTypes:Page':
+#  childNodes:
+#    'sidebar':
+#      type: 'TYPO3.Neos:ContentCollection'
+
+# Seite im Hintergrundbild erweitern
+# 'TYPO3.Neos.NodeTypes:Page':
+#   ui:
+#     inspector:
+#       groups:
+#         background:
+#           label: 'Hintergrund'
+#           position: 900
+#   properties:
+#     backgroundimage:
+#       type: TYPO3\Media\Domain\Model\ImageInterface
+#       ui:
+#         label: 'Hintergrundbild'
+#         reloadPageIfChanged: TRUE
+#         inspector:
+#           group: 'background'
+'TYPO3.Neos.NodeTypes:Page':
+  'main':
+    constraints:
+      nodeTypes:
+        'Js.Emilia:HomePage': FALSE
+        '*': TRUE
+  ui:
+    inspector:
+      groups:
+        background:
+          label: 'Hintergrund'
+          position: 900
+  properties:
+    backgroundimage:
+      type: TYPO3\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Hintergrundbild'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'background'
+
+# Startseite
+'Js.Emilia:HomePage':
+  superTypes:
+    'TYPO3.Neos.NodeTypes:Page': TRUE
+  ui:
+    label: 'Homepage'
+    icon: 'icon-home'
+    inspector:
+      groups:
+        info:
+          label: 'Informationen'
+          position: 5
+    inspector:
+      groups:
+        info:
+          label: 'Seiteninformation'
+          position: 1
+  properties:
+    sitename:
+      type: string
+      defaultValue: 'Sitename ...'
+      ui:
+        label: 'Seitenname'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'info'
+    subline:
+      type: string
+      defaultValue: '... mehr dazu ...'
+      ui:
+        label: 'Untertitel'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'info'
+    emailaddress:
+      type: string
+      defaultValue: 'mail@website.tld'
+      ui:
+        label: 'Kontakt E-Mail'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'info'
+
+# Neuer Splash Inhalt
+'Js.Emilia:Splash':
+  superTypes:
+    'TYPO3.Neos.NodeTypes:Text': TRUE
+  ui:
+    label: 'Großer Text (Einleitung)'
+    group: 'general'
+
+# Teambox (Bild neben Text)
+'Js.Emilia:TeamBox':
+  superTypes:
+    'TYPO3.Neos.NodeTypes:TextWithImage': TRUE
+  ui:
+    label: 'Team-Bild mit Text'
+    group: 'general'
+
+# 
+# Remove Elements
+# 
+'TYPO3.Neos.NodeTypes:Headline':
+  abstract: TRUE
+
+'TYPO3.Neos.NodeTypes:AssetList':
+  abstract: TRUE
+
+'TYPO3.Neos.NodeTypes:Form':
+  abstract: TRUE
+
+'TYPO3.Neos.NodeTypes:Menu':
+  abstract: TRUE
+
+'TYPO3.Neos.NodeTypes:TwoColumn':
+  abstract: TRUE
+
+'TYPO3.Neos.NodeTypes:ThreeColumn':
+  abstract: TRUE
+
+'TYPO3.Neos.NodeTypes:FourColumn':
+  abstract: TRUE
+
+'TYPO3.Neos:PluginView':
+  abstract: TRUE
+
+'Flowpack.Neos.FrontendLogin:LoginForm':
+  abstract: TRUE

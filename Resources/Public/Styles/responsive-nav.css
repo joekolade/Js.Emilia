@@ -1,0 +1,68 @@
+/*! responsive-nav.js v1.0.14 by @viljamis */
+
+/*
+#nav ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  list-style: none;
+}
+
+#nav li {
+  width: 100%;
+  display: block;
+}
+*/
+
+#nav.opened {
+  max-height: 9999px;
+}
+
+@media screen and (min-width: 40em) {
+
+	.js #nav {
+	position: relative;
+	max-height: none;
+	}
+	#nav-toggle {
+	display: none;
+	}
+}
+
+
+@media screen and (max-width: 670px) {
+
+
+
+.js #nav {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+	#nav ul {
+	  margin: 0;
+	  padding: 0;
+	  width: 100%;
+	  display: block;
+	  list-style: none;
+	}
+	
+	#nav li {
+	  width: 100%;
+	  display: block;
+	}
+
+	#top { position: relative; }
+	header { float: left; margin-left: 1em; }
+	#nav-toggle { float: right; margin-right: 4%; }
+	#nav  { overflow: visible; padding: 0; }
+	#nav ul { padding: 1em 0 ; }
+	#nav ul li { padding-bottom: 1px; }
+	#nav ul li a { width: 100%; background-color: #009cdf; color: white; display: block; font-weight: bold; padding: 0.5em 2em ;  } 
+	article { margin: 0em; }
+}

@@ -1,0 +1,13 @@
+Js:
+  Emilia:
+    emailaddress: 'info@beratung-emilia.ch'
+    claim: 'Gemeinsam Wege finden'    
+
+# TYPO3:
+#   Neos:
+#     GoogleAnalytics:
+#       sites:
+#         buecherwuermle:
+#           trackingId: 'UA-66386506-1'
+#           profileId: '106880705'
+#           clientId: '106880705'
