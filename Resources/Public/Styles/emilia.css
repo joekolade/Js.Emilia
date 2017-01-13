@@ -67,7 +67,7 @@ body {
   width: 100%;
 }
 @media only screen and (min-width: 1200px) {
-  
+
 }
 /* POSITIONIERUNG */
 nav {
@@ -84,7 +84,7 @@ footer {
   /* 25AA: square; rect: 25AE , 2759 */
 
 }
-footer * {
+footer > * {
   padding-top: 0.5em;
   margin-top: 0;
 }
@@ -196,15 +196,14 @@ header h1,
 header h2 {
   display: none;
 }
-header .claim {  
-  border-top: 2px dotted rgba(0, 156, 223, 0.1);
-  font-weight: bold;
-  text-align: center;
-  padding-top: 5px;
-}
 
 footer {
   padding: 0 0 0 1.33em;
+}
+p.claim {
+  font-weight: bold;
+  margin-bottom: 0;
+  text-transform: lowercase;
 }
 article {
   clear: both;
@@ -314,6 +313,14 @@ article a:active {
     border-top: 2px dotted black;
   }
 }
+@media only screen and (min-width: 980px) {
+  #nav {
+    margin-top: 76px;
+  }
+  #top header {
+    position: absolute;
+  }
+}
 @media only screen and (max-width: 980px), print {
   /*  TABLET:  670-960 px  */
   body {
@@ -330,9 +337,9 @@ article a:active {
   header {
     top: 15px;
   }
-  nav ul,
+  #nav ul,
   article,
-  footer * {
+  footer > * {
     margin-left: 2em;
   }
   footer li.slogan {
@@ -463,7 +470,7 @@ article a:active {
     background: transparent !important;
     color: #000 !important;
     /* Black prints faster: h5bp.com/s */
-  
+
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -472,24 +479,24 @@ article a:active {
       a:visited {
           text-decoration: underline;
       }
-  
+
       a[href]:after {
           content: " (" attr(href) ")";
       }
-  
+
       abbr[title]:after {
           content: " (" attr(title) ")";
       }
-  
+
       //Don't show links for images, or javascript/internal links
-  
-  
+
+
       .ir a:after,
       a[href^="javascript:"]:after,
       a[href^="#"]:after {
           content: "";
       }
-  
+
       pre,
       blockquote {
           border: 1px solid #999;
@@ -546,11 +553,11 @@ nav ul {
   display: -ms-flexbox;
   display: flex;
 
-  -webkit-justify-content: flex-end;
-    -ms-flex-pack: end;
-      justify-content: flex-end;
+  -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+      justify-content: flex-start;
 
-  margin-left: 100px;
+  margin-left: 300px;
   max-width: 880px;
 }
 nav ul li {
@@ -579,7 +586,7 @@ nav ul li {
   header a {
     width: 230px;
   }
-  
+
   #nav-toggle {
     margin-top: -2em;
     padding-top: 0;

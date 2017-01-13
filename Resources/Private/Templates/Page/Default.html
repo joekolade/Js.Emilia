@@ -7,14 +7,14 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    
+
     <title>Baby-Hilfe Zürich</title>
 
     <f:section name="stylesheets">
-        
+
         <meta name="viewport" content="width=device-width">
         <meta name="msvalidate.01" content="02FC1675B548F7BD5B15EF669CF55844" />
-        
+
         <!-- Favicons -->
         <link rel="shortcut icon" href="{f:uri.resource(path: 'Favicons/favicon-16x16.png', package: 'Js.Emilia')}">
         <link rel="apple-touch-icon" sizes="57x57" href="{f:uri.resource(path: 'Favicons/apple-icon-57x57.png', package: 'Js.Emilia')}">
@@ -41,7 +41,7 @@
         <link rel="stylesheet" href="{f:uri.resource(path: 'Styles/emilia.css', package: 'Js.Emilia')}">
         <link rel="stylesheet" href="{f:uri.resource(path: 'Styles/responsive-nav.css', package: 'Js.Emilia')}">
     </f:section>
-    
+
     <f:section name="headScripts">
         <script src="{f:uri.resource(path: 'JavaScript/responsive-nav.js', package: 'Js.Emilia')}"></script>
         <script src="{f:uri.resource(path: 'JavaScript/vendor/modernizr-2.6.2.min.js', package: 'Js.Emilia')}"></script>
@@ -55,30 +55,30 @@
                 <a href="/" title="zur startseite">
                     <h1>{sitename}</h1>
                     <h2>{subline}</h2>
-                    <p class="claim">{claim}</p>
                 </a>
             </header>
             <nav id="nav" class="simple">
-                
+
                 {parts.menu -> f:format.raw()}
 
             </nav>
             <article>
-                
+
                 {content.main -> f:format.raw()}
 
             </article>
         </div>
         <!-- #top -->
         <footer>
+            <p class="claim">{claim}</p>
             <ul>
                 <li>{homelink -> f:format.raw()}</li>
-                    <li class="slogan">{subline-> f:format.raw()}</li>
-                    <li>
-                        <f:link.email email="{emailaddress ->f:format.raw()}">E-Mail</f:link.email>
-                    </li>
+                <li class="slogan">{subline-> f:format.raw()}</li>
+                <li>
+                    <f:link.email email="{emailaddress ->f:format.raw()}">E-Mail</f:link.email>
+                </li>
 
-                    {metaMenu -> f:format.raw()}
+                {metaMenu -> f:format.raw()}
             </ul>
         </footer>
     </f:section>
