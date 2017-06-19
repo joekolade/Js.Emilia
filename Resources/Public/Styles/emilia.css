@@ -297,11 +297,6 @@ figure img {
     padding-top: 0.25em;*/
 }
 
-.teambox {
-    float: left;
-    clear: both;
-}
-
 .teambox figure img {
     float: left;
     width: 21.588%;
@@ -315,6 +310,7 @@ figure img {
 }
 
 .neos-contentelement.teambox {
+    float: left;
     clear: both;
     overflow: auto;
 }
